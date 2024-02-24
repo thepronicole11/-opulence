@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import "locomotive-scroll/dist/locomotive-scroll.css";
@@ -7,9 +7,26 @@ import { dark } from './styles/Themes';
 import GlobalStyles from './styles/GlobalStyles'
 import Home from './sections/Home';
 import { AnimatePresence } from 'framer-motion';
+import { About } from './sections/About';
+import { Shops } from './sections/Shops';
+import { ScrollTriggerProxy } from './components/ScrollTriggerProxy';
+import { Banner } from './sections/Banner';
+import { NewArrivals } from './sections/NewArrivals';
+import { Footer } from './sections/Footer';
+import { Loader } from './components/Loader';
 
 function App() {
   const containerRef = useRef(null)
+
+  const [loaded, setloaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setloaded(true);
+    }, 3000);
+  }, [])
+  
+
   return (
     <>
     <GlobalStyles/>
@@ -29,8 +46,17 @@ function App() {
         containerRef={containerRef}
       >
       <AnimatePresence>
-        <main data-scroll-container ref={containerRef}>
+      {loaded ? null : <Loader/>}
+      </AnimatePresence>
+      <ScrollTriggerProxy />
+      <AnimatePresence>
+        <main className='App' data-scroll-container ref={containerRef}>
           <Home />
+          <About />
+          <Banner />
+          <Shops />
+          <NewArrivals />
+          <Footer />
         </main>
         </AnimatePresence>
       </LocomotiveScrollProvider>

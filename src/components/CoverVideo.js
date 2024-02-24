@@ -82,8 +82,8 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      delayChildren: .8, // 2
-      staggerChildren: 0.2,
+      delayChildren: 5,
+      staggerChildren: 0.3,
     },
   },
 };
@@ -106,7 +106,7 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.38"
+            data-scroll-delay="0.20"
             data-scroll-speed="10"
           >
             A
@@ -114,7 +114,7 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.32"
+            data-scroll-delay="0.18"
             data-scroll-speed="10"
           >
             u
@@ -122,7 +122,7 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.28"
+            data-scroll-delay="0.16"
             data-scroll-speed="10"
           >
             t
@@ -130,7 +130,7 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.24"
+            data-scroll-delay="0.14"
             data-scroll-speed="10"
           >
             h
@@ -138,7 +138,7 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.20"
+            data-scroll-delay="0.12"
             data-scroll-speed="10"
           >
             e
@@ -146,7 +146,7 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.16"
+            data-scroll-delay="0.10"
             data-scroll-speed="10"
           >
             n
@@ -154,7 +154,7 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.12"
+            data-scroll-delay="0.8"
             data-scroll-speed="10"
           >
             t
@@ -162,7 +162,7 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.8"
+            data-scroll-delay="0.6"
             data-scroll-speed="10"
           >
             i
@@ -182,7 +182,7 @@ const CoverVideo = () => {
           style={{ alignSelf: "flex-end" }}
           variants={item}
           data-scroll
-          data-scroll-delay="0.4"
+          data-scroll-delay="0.2"
           data-scroll-speed="1"
         >
           222
